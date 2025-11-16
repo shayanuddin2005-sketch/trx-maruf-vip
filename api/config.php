@@ -4,5 +4,5 @@ session_start();
 
 // আপনার গোপন পাসওয়ার্ড এখানে সেট করুন
 // এই পাসওয়ার্ডটি পরিবর্তন করলেই সবার জন্য পাসওয়ার্ড পরিবর্তন হয়ে যাবে
-php $ADMIN_PASSWORD = getenv('ADMIN_PASSWORD'); 
+$ADMIN_PASSWORD = getenv('ADMIN_PASSWORD'); 
 ?>
