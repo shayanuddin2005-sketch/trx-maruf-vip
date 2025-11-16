@@ -12,6 +12,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($submitted_password) && $submitted_password === $ADMIN_PASSWORD) {
         // Correct password
         $_SESSION['loggedin'] = true; // Mark user as logged in
+        
+        // --- VERCEL-এর জন্য এই লাইনটি যোগ করা হয়েছে ---
+        session_write_close(); // সেশন সেভ করার জন্য Vercel-কে বাধ্য করা
+        // --- --- --- --- --- --- --- --- --- --- ---
+
         header("Location: game-selection.php"); // Redirect to next page
         exit;
     } else {
